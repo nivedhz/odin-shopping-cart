@@ -21,6 +21,6 @@ export function useProducts() {
       }
     };
     fetchData();
-  }, [API_URL]);
+  }, []);
   return [data, error, loading];
 }
