@@ -1,0 +1,26 @@
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.navbar__heading-btn {
+  background: none;
+  border: none;
+}
+.navbar__heading-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+}
+.navbar__link-container {
+  display: flex;
+  gap: 2rem;
+}
+.navbar__home-link,
+.navbar__products-link,
+.navbar__cart-link {
+  text-decoration: none;
+  color: black;
+}
