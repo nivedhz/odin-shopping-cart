@@ -5,11 +5,9 @@ const Navbar = () => {
   return (
     <nav className="navbar__container">
       <div className="navbar__heading-container">
-        <button className="navbar__heading-btn" title="Shopo Home">
-          <Link to={"/home"} className="navbar__heading-link">
-            <h1>Shopo</h1>
-          </Link>
-        </button>
+        <Link to={"/home"} className="navbar__heading-link">
+          <h1>Shopo</h1>
+        </Link>
       </div>
       <ul className="navbar__link-container">
         <li>
