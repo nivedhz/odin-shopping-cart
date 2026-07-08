@@ -11,17 +11,26 @@ const Navbar = () => {
           </Link>
         </button>
       </div>
-      <div className="navbar__link-container">
-        <Link to={"home"} className="navbar__home-link">
-          Home
-        </Link>
-        <Link to={"products"} className="navbar__products-link">
-          Products
-        </Link>
-        <Link to={"cart"} className="navbar__cart-link">
-          Cart
-        </Link>
-      </div>
+      <ul className="navbar__link-container">
+        <li>
+          <Link to={"home"} className="navbar__home-link hover-underline">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to={"products"}
+            className="navbar__products-link hover-underline"
+          >
+            Products
+          </Link>
+        </li>
+        <li>
+          <Link to={"cart"} className="navbar__cart-link hover-underline">
+            Cart
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 };
