@@ -69,6 +69,14 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  transition: all 200ms ease-in-out;
+}
+
+.home__products-link:hover {
+  opacity: 0.8;
+}
+.home__products-link:active {
+  opacity: 1;
 }
 
 .home__products-link:before {
