@@ -1,10 +1,10 @@
 import { Navigate, Outlet } from "react-router";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { useProducts } from "./data/fetchProducts.jsx";
+import { useProducts } from "./hooks/useProducts";
 
 function App() {
-  const [data, error, loading] = useProducts();
+  const { data, error, loading } = useProducts();
   if (loading)
     return (
       <div className="loader__loading-container">
