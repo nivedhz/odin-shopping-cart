@@ -55,7 +55,19 @@
 .hover-underline:hover {
   color: rgba(0, 100, 230, 0.9);
 }
+
+.navbar__home-link.active,
+.navbar__products-link.active,
+.navbar__cart-link.active {
+  color: rgba(0, 100, 230, 0.9);
+}
 .hover-underline:hover::after,
-.hover-underline:hover::before {
+.hover-underline:hover::before,
+.navbar__home-link.active.hover-underline::after,
+.navbar__products-link.active.hover-underline::after,
+.navbar__cart-link.active.hover-underline::after,
+.navbar__home-link.active.hover-underline::before,
+.navbar__products-link.active.hover-underline::before,
+.navbar__cart-link.active.hover-underline::before {
   transform: scaleX(1.1);
 }
