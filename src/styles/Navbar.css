@@ -31,12 +31,15 @@
   text-decoration: none;
   color: black;
 }
+
+/*
+ * Hover Animation From:
+ * https://prismic.io/blog/css-hover-effects
+ */
 .hover-underline {
   position: relative;
-  display: inline-block;
   transition: all 0.3s ease-in-out;
 }
-
 .hover-underline::after,
 .hover-underline::before {
   content: "";
@@ -47,19 +50,12 @@
   bottom: -5px;
   left: 0;
   transform: scaleX(0);
-  transform-origin: right;
   transition: all 0.4s ease-out;
 }
-
-.hover-underline::before {
-  top: -5px;
-  transform-origin: left;
-}
 .hover-underline:hover {
-  color: rgba(0, 100, 230, 1);
+  color: rgba(0, 100, 230, 0.9);
 }
-
 .hover-underline:hover::after,
 .hover-underline:hover::before {
-  transform: scaleX(1);
+  transform: scaleX(1.1);
 }
