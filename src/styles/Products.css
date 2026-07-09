@@ -1,0 +1,27 @@
+.product__category-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+.product__category-item {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  transition: all 200ms ease-in-out;
+}
+
+.product__category-item:hover {
+  background-color: rgba(0, 0, 0, 0.17);
+}
+.product__category-item button {
+  padding: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.active-category {
+  background-color: rgba(0, 0, 0, 0.3);
+}
