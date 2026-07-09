@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import { useProducts } from "./hooks/useProducts";
 import Error from "./pages/Error";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 function App() {
   const { data, error, loading } = useProducts();
@@ -10,11 +11,9 @@ function App() {
   return (
     <>
       {loading !== false ? (
-        <div className="loader__loading-container">
-          <div className="inner one"></div>
-          <div className="inner two"></div>
-          <div className="inner three"></div>
-        </div>
+        <LoadingSpinner />
+      ) : error === true ? (
+        <Error error={error} />
       ) : (
         <>
           <Navbar />
