@@ -2,23 +2,26 @@ import { Navigate, Outlet } from "react-router";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { useProducts } from "./hooks/useProducts";
+import Error from "./pages/Error";
 
 function App() {
   const { data, error, loading } = useProducts();
-  if (loading)
-    return (
-      <div className="loader__loading-container">
-        <div className="inner one"></div>
-        <div className="inner two"></div>
-        <div className="inner three"></div>
-      </div>
-    );
-  if (error) return <h1>Error: {error}</h1>;
+  if (error) return <Error error={error} />;
   return (
     <>
-      <Navbar />
-      <Navigate to={"/home"} replace />
-      <Outlet context={{ data }} />
+      {loading !== false ? (
+        <div className="loader__loading-container">
+          <div className="inner one"></div>
+          <div className="inner two"></div>
+          <div className="inner three"></div>
+        </div>
+      ) : (
+        <>
+          <Navbar />
+          <Navigate to={"/home"} replace />
+          <Outlet context={{ data }} />
+        </>
+      )}
     </>
   );
 }
