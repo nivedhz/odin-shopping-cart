@@ -36,6 +36,21 @@ const CategoryContainer = ({ categories, activeIndex, setActiveIndex }) => {
   );
 };
 
+const ProductContainer = ({ activeIndex, products, categories }) => {
+  function returnCategoryProducts() {
+    if (activeIndex === 0) return products;
+    return products.filter((item) => item.category === categories[activeIndex]);
+  }
+  const categoryProducts = returnCategoryProducts();
+  return (
+    <div>
+      {categoryProducts.map((product) => {
+        return <li key={product.title}>{product.title}</li>;
+      })}
+    </div>
+  );
+};
+
 const Products = () => {
   const { data } = useOutletContext();
   const categories = ["All"];
@@ -44,11 +59,18 @@ const Products = () => {
     if (!categories.includes(item.category)) categories.push(item.category);
   });
   return (
-    <CategoryContainer
-      categories={categories}
-      activeIndex={activeIndex}
-      setActiveIndex={setActiveIndex}
-    />
+    <div>
+      <CategoryContainer
+        categories={categories}
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+      />
+      <ProductContainer
+        activeIndex={activeIndex}
+        products={data.products}
+        categories={categories}
+      ></ProductContainer>
+    </div>
   );
 };
 

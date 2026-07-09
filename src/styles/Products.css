@@ -23,5 +23,8 @@
   background: none;
 }
 .active-category {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+.active-category button {
+  color: white;
 }
