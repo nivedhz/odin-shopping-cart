@@ -79,7 +79,7 @@
   opacity: 1;
 }
 
-.home__products-link:before {
+.home__products-link::before {
   content: "";
   background: linear-gradient(
     45deg,
