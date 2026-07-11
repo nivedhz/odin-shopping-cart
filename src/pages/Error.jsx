@@ -4,7 +4,7 @@ import "../styles/Error.css";
 const Error = ({ error }) => {
   return (
     <div className="error__container">
-      <h1 className="error__heading">An unexpected Error occured:</h1>
+      <h1 className="error__heading">An unexpected Error occured</h1>
       <p className="error__message"> {error}</p>
       <span>
         Want to go back to the{" "}
