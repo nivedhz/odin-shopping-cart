@@ -5,7 +5,7 @@ import CategoryContainer from "../components/CategoryContainer";
 import ProductContainer from "../components/ProductContainer";
 
 const Products = () => {
-  const { data } = useOutletContext();
+  const { data, cartItems, setCartItems } = useOutletContext();
   const categories = ["All"];
   const [activeIndex, setActiveIndex] = useState(0);
   data.products.forEach((item) => {
@@ -19,6 +19,8 @@ const Products = () => {
         setActiveIndex={setActiveIndex}
       />
       <ProductContainer
+        cartItems={cartItems}
+        setCartItems={setCartItems}
         activeIndex={activeIndex}
         products={data.products}
         categories={categories}
