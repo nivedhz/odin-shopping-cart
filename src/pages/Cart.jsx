@@ -9,7 +9,10 @@ const Cart = () => {
   return (
     <div className="cart__container">
       <CartItemContainer cartItems={cartItems} setCartItems={setCartItems} />
-      <CartItemCheckoutContainer />
+      <CartItemCheckoutContainer
+        cartItems={cartItems}
+        setCartItems={setCartItems}
+      />
     </div>
   );
 };

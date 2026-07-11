@@ -34,6 +34,7 @@ const ProductItem = ({ product, cartItems, setCartItems }) => {
       />
       <div className="product__item-text-container">
         <h3 className="product__item-title">{product.title}</h3>
+        <h2 className="product__item-price">${product.price}</h2>
         <p className="product__item-description">{product.description}</p>
       </div>
     </div>

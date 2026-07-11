@@ -37,6 +37,9 @@
 .product__item-text-container {
   padding: 1rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .product__container {
   display: grid;
@@ -44,9 +47,6 @@
   gap: 1.5rem;
   padding: 4rem 1rem 1rem 1rem;
   overflow-wrap: break-word;
-}
-.product__item-title {
-  padding-bottom: 0.5rem;
 }
 .product__item-description {
   color: rgba(0, 0, 0, 0.6);

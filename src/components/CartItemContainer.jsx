@@ -27,37 +27,10 @@ const CartItem = ({ product, setCartItems }) => {
               />
             </button>
           </div>
+          <h3>${product.price}</h3>
           <p className="cart-item__product-desc">{product.description}</p>
         </div>
         <div className="cart-item__btn-container">
-          <button
-            className="cart-item__plus-btn"
-            onClick={() => {
-              setCartItems((prevData) =>
-                prevData.map((item) =>
-                  item.id === product.id
-                    ? { ...item, quantity: item.quantity + 1 }
-                    : item,
-                ),
-              );
-            }}
-          >
-            &#43;
-          </button>
-          <input
-            type="number"
-            className="cart-item__text-input"
-            value={product.quantity}
-            onChange={(e) => {
-              setCartItems((prevData) =>
-                prevData.map((item) =>
-                  item.id === product.id
-                    ? { ...item, quantity: Number(e.target.value) }
-                    : item,
-                ),
-              );
-            }}
-          />
           <button
             className="cart-item__minus-btn"
             onClick={() => {
@@ -74,6 +47,34 @@ const CartItem = ({ product, setCartItems }) => {
           >
             &#8722;
           </button>
+          <input
+            type="number"
+            className="cart-item__text-input"
+            value={product.quantity}
+            onChange={(e) => {
+              setCartItems((prevData) =>
+                prevData.map((item) =>
+                  item.id === product.id
+                    ? { ...item, quantity: Number(e.target.value) }
+                    : item,
+                ),
+              );
+            }}
+          />
+          <button
+            className="cart-item__plus-btn"
+            onClick={() => {
+              setCartItems((prevData) =>
+                prevData.map((item) =>
+                  item.id === product.id
+                    ? { ...item, quantity: item.quantity + 1 }
+                    : item,
+                ),
+              );
+            }}
+          >
+            &#43;
+          </button>
         </div>
       </div>
     </div>
@@ -81,7 +82,6 @@ const CartItem = ({ product, setCartItems }) => {
 };
 
 const CartItemContainer = ({ cartItems, setCartItems }) => {
-  console.log(cartItems);
   return (
     <div className="cart__item-container">
       <h1>Cart</h1>
