@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import "../styles/Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ cartItems }) => {
   return (
     <nav className="navbar__container">
       <div className="navbar__heading-container">
@@ -38,7 +38,7 @@ const Navbar = () => {
             className="navbar__cart-link hover-underline"
             title="Cart"
           >
-            Cart
+            Cart &#40;{cartItems.length}&#41;
           </NavLink>
         </li>
       </ul>
