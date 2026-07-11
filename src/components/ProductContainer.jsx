@@ -3,7 +3,8 @@ import cartAddedImg from "../assets/cart-added.svg";
 
 const ProductItem = ({ product, cartItems, setCartItems }) => {
   function productInCart() {
-    return cartItems.includes(product);
+    const isProduct = cartItems.find((item) => item.title === product.title);
+    return !!isProduct;
   }
   return (
     <div className="product__item">
@@ -12,9 +13,12 @@ const ProductItem = ({ product, cartItems, setCartItems }) => {
         onClick={() => {
           productInCart()
             ? setCartItems((prevData) =>
-                prevData.filter((item) => item !== product),
+                prevData.filter((item) => item.title !== product.title),
               )
-            : setCartItems((prevData) => [...prevData, product]);
+            : setCartItems((prevData) => [
+                ...prevData,
+                { ...product, quantity: 1 },
+              ]);
         }}
       >
         <img
