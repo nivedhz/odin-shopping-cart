@@ -1,4 +1,4 @@
-import { Navigate, Outlet } from "react-router";
+import { Outlet } from "react-router";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { useProducts } from "./hooks/useProducts";
@@ -20,7 +20,6 @@ function App() {
       ) : (
         <>
           <Navbar cartItems={cartItems} />
-          <Navigate to={"/home"} replace />
           <Outlet context={{ data, cartItems, setCartItems }} />
         </>
       )}
