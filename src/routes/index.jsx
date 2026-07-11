@@ -1,16 +1,17 @@
-import { createBrowserRouter } from "react-router";
-import App from "../App";
+import { createBrowserRouter, Navigate } from "react-router";
 import Home from "../pages/Home";
 import Error from "../pages/Error";
 import Products from "../pages/Products";
 import Cart from "../pages/Cart";
+import App from "../App";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App></App>,
     children: [
-      { index: true, path: "home", element: <Home /> },
+      { index: true, element: <Navigate to="/home" replace /> },
+      { path: "home", element: <Home /> },
       { path: "products", element: <Products /> },
       { path: "cart", element: <Cart /> },
     ],
