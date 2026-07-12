@@ -148,3 +148,32 @@
 .cart-items__checkout-btn:hover {
   transform: scale(1.03);
 }
+@media screen and (max-width: 768px) {
+  .cart__container {
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 90vw;
+  }
+  .cart-item__product-desc {
+    display: none;
+  }
+  .cart-item__product-title {
+    display: none;
+  }
+  .cart-item__heading-container {
+    justify-content: end;
+  }
+  .cart__item-container {
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 55ch;
+  }
+  .cart-item__item-img {
+    max-width: 7rem;
+  }
+  .cart-items__checkout-container {
+    min-width: 85vw;
+    top: initial;
+    position: static;
+  }
+}

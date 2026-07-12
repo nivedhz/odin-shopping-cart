@@ -80,3 +80,16 @@
 .product__item-cart-btn:hover {
   transform: scale(1.03);
 }
+@media screen and (max-width: 768px) {
+  .product__category-container {
+    overflow: scroll;
+    justify-content: start;
+    padding: 2rem;
+  }
+  .product__category-item {
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    transition: all 200ms ease-in-out;
+  }
+}

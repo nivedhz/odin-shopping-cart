@@ -130,3 +130,54 @@
   top: 0;
   border-radius: 10px;
 }
+@media screen and (max-width: 768px) {
+  .home__container {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    background-image: url(../assets/model-with-bag.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .home__heading-container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .home__heading-new-arrivals {
+    font-weight: 300;
+    font-size: 1rem;
+    align-self: end;
+  }
+  .home__heading-just-for-container {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  .home__heading-just,
+  .home__heading-for {
+    font-family: "Boldonse", sans-serif;
+  }
+  .home__heading-you {
+    line-height: 0;
+    margin-top: -40px;
+    font-weight: 700;
+    font-size: 5rem;
+    color: yellow;
+    transform: rotateZ(-25deg);
+    font-family: "Lavishly Yours", sans-serif;
+  }
+
+  .home__products-link {
+    font-size: 1.2rem;
+    align-self: center;
+    justify-self: center;
+    margin-right: 0;
+  }
+}
