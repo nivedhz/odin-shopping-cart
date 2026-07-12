@@ -151,8 +151,11 @@
 @media screen and (max-width: 768px) {
   .cart__container {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
-    width: 90vw;
+    width: 100vw;
+    padding: 1rem;
   }
   .cart-item__product-desc {
     display: none;
