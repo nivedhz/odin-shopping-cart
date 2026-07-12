@@ -152,6 +152,7 @@
   .cart__container {
     flex-direction: column;
     gap: 1rem;
+    min-width: 85vw;
     max-width: 90vw;
   }
   .cart-item__product-desc {
@@ -172,8 +173,13 @@
     max-width: 7rem;
   }
   .cart-items__checkout-container {
-    min-width: 85vw;
+    min-width: 83vw;
+    max-width: 90vw;
     top: initial;
     position: static;
+  }
+  .cart-items__checkout-btn {
+    align-self: center;
+    justify-self: center;
   }
 }
